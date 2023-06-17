@@ -33,6 +33,11 @@ export default class UsersBox extends Component {
         })
     }
 
+
+    search = (query = {}) => {
+
+    }
+
     render() {
         return (
             <div className="container" >

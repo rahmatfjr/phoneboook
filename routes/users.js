@@ -6,16 +6,10 @@ var { Response } = require('../helpers/utils')
 /* GET users listing. */
 router.get('/', async function (req, res, next) {
   try {
-    const { name } = req.query
-    const params = {}
-
-    if(name){
-      params['name'] = new RegExp(name)
-    }
 
     const users = await models.User.findAll()
     res.json(new Response(users))
-    console.log(users,'data keluar')
+    // console.log(users,'data keluar')
   }
   catch (err) {
     res.status(500).json(new Response(err, false))
