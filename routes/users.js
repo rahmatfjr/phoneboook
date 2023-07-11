@@ -5,7 +5,7 @@ var { Response } = require('../helpers/utils')
 
 /* GET users listing. */
 router.get('/', async function (req, res, next) {
-  try {
+  try {23
 
     const users = await models.User.findAll()
     res.json(new Response(users))
@@ -26,7 +26,7 @@ router.post('/', async function (req, res, next) {
   }
 });
 
-router.put('/:id', async function (req, res, next) {
+router.patch('/:id', async function (req, res, next) {
   try {
     const users = await models.User.update(req.body,{
       where: {
