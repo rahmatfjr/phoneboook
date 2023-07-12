@@ -26,7 +26,7 @@ router.post('/', async function (req, res, next) {
   }
 });
 
-router.patch('/:id', async function (req, res, next) {
+router.put('/:id', async function (req, res, next) {
   try {
     const users = await models.User.update(req.body,{
       where: {
